@@ -19,15 +19,29 @@ var arrayTasks = {
 		return arr.reduce(function(total, number){
 			return total + number;
 		})
-	}//,
+	},
 
-	// findDuplicates: function (arr) {
-		
-	// },
+	findDuplicates: function (arr) {
+		duplicateArray = []
+		for(var i = 0; i < arr.length; i++){
+			for(var j = 0; j < arr.length; j++){
+				if(arr[i] == arr[j] && i !== j && !duplicateArray.includes(arr[i])){
+					duplicateArray.push(arr[i]);
+				}
+			}
+		}
+		return duplicateArray;
+	},
 
-	// removeAndClone: function (arr, valueToRemove) {
-		
-	// },
+	removeAndClone: function (arr, valueToRemove) {
+		filteredArray = [];
+		arr.forEach(function(number){
+			if(number !== valueToRemove){
+				filteredArray.push(number);
+			}
+		})
+		return filteredArray;
+	},
 
 	// findIndexesOf: function (arr, itemToFind) {
 		
