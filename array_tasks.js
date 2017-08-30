@@ -53,9 +53,15 @@ var arrayTasks = {
 		return indexPos;
 	},
 
-	// sumOfAllEvenNumbersSquared: function (arr) {
-		
-	// }
+	sumOfAllEvenNumbersSquared: function (arr) {
+		var total = 0;
+		arr.forEach(function(number){
+			if(number % 2 === 0){
+				total += (number**2);
+			}
+		})
+		return total;
+	}
 
 }
 
